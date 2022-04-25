@@ -5,9 +5,10 @@ metadata:
   namespace: sparkjava
 spec:
   selector:
-    app:  sparkjava
-  type:  ClusterIP 
+     app:  sparkjava
+     ports:
   ports:
-  - name:  sparkjava
-    port:  80
-    targetPort:  8080
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
